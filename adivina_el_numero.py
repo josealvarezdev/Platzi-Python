@@ -11,13 +11,14 @@ def run():
         else:
             print('Busca un numero mas chico')
             vidas -= 1
-        if vidas == 0:
+        if vidas == 0 and numero_elegido != numero_aleatorio:
             print ('GAME OVER')
             break
         print_vidas = str(vidas)
         print ('Te quedan ' + print_vidas + ' vidas')
         numero_elegido = int(input('Escoge otro numero: '))
-    print ("GANASTE!")
+    if numero_elegido == numero_aleatorio:
+        print ("GANASTE!")
 
 
 if __name__ == '__main__':
